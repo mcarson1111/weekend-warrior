@@ -1,4 +1,4 @@
-gem 'minitest', '>= 5.0.0'
+gem 'minitest', '>= 5.0.0'    # 1-4 is housekeeping......do not change any code!!
 require 'minitest/pride'
 require 'minitest/autorun'
 require_relative 'hello_world'
@@ -11,6 +11,7 @@ class HelloWorldTest < Minitest::Test
   end
 
   def test_sample_name
+  #this tells mini-test we are not running that test first, we are skipping it
     assert_equal 'Hello, Alice!', hello_world('Alice'), <<-MSG
     When given "Alice" it should greet Alice!
     MSG
